@@ -323,6 +323,9 @@ enum Scope<'a> {
     Root,
 }
 
+// FIXME just a hack to get a crater run!
+unsafe impl<'a> Sync for Scope<'a> {}
+
 #[derive(Clone, Debug)]
 enum Elide {
     /// Use a fresh anonymous late-bound lifetime each time, by
